@@ -3,8 +3,8 @@
 return array (
     'sql-build' => new PDO('mysql:host=127.0.0.1', 'root', ''),
     'sql-main' => new PDO('mysql:host=127.0.0.1;dbname=cradle_sink', 'root', ''),
-    'redis-main' => Elasticsearch\ClientBuilder::create()->build(),
-    'elastic-main' => new Predis\Client([
+    'elastic-main' => Elasticsearch\ClientBuilder::create()->build(),
+    'redis-main' => new Predis\Client([
         "scheme" => "tcp",
         "host" => "127.0.0.1",
         "port" => 6379
